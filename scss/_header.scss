@@ -1,0 +1,136 @@
+.header::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	top: 0;
+	background-image: url(../images/Group.png);
+	position: absolute;
+	z-index: -1;
+}
+.header{
+	.header__inner{
+		display: flex;
+		justify-content: space-between;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#btn{
+		z-index: 2;
+		width: 36px;
+		height: 36px;
+		background: transparent;
+		border: none;
+		transition: 0.3s;
+	}
+	.btn__line{
+		width: 36px;
+		height: 4px;
+		background: linear-gradient(147.14deg, #2EECC5 8.04%, #3A796D 80.38%);
+		box-shadow: 0px 0px 21px rgba(53, 166, 144, 0.5);
+		margin-bottom: 11px;
+		transition: 0.3s;
+	}
+	.btn__line--two{
+		width: 24px;
+	}
+	&__logo{
+		order: 1;
+	}
+	&__menu{
+		font-size: 0;
+		width: 0px;
+		height: 0px;
+	}
+	&__btn{
+		display: none;
+		.btn{
+			padding: 10px 40px 10px 40px;
+		}
+	}
+	&__inner.menu__active{
+		#btn{
+			margin-left: 16px;
+			transition: 0.3s;
+		}
+		.btn__line--two{
+			display: none;
+		}
+		.btn__line--one{
+			transform: rotate(45deg);
+			margin-bottom: 0;
+		}
+		.btn__line--three{
+			transform: rotate(135deg);
+			margin-top: -3px;
+		}
+		.header__menu{
+			font-size: 20px;
+			width: 94%;
+			height: 340px;
+			position: absolute;
+			background: linear-gradient(132.64deg, #161919 2.37%, #373A3A 100.31%);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			top: 0;
+			border-radius: 0px 0px 20px 20px;
+			transition: 0.3s;
+		}
+		.menu__items{
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			margin-top: 125px;
+		}
+		.menu__link{
+			background: linear-gradient(91.2deg, #B5FEEF 10.31%, #2EECC5 165.09%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+			font-weight: 700;
+		}
+		.menu__item{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.menu__item:hover{
+			background: linear-gradient(90.18deg, #30DBB8 -17.89%, #37A58F 24.63%, #398778 99.91%);
+		}
+	}
+}
+
+@media(min-width: 992px){
+	.header{
+		&__inner{
+			
+		}
+		#btn{
+			display: none;
+		}
+		&__logo{
+			order: 0;
+		}
+		&__menu{
+			width: 100%;
+			font-size: 15px;
+			display: flex;
+			flex-direction: row-reverse;
+		}
+		.menu__item{
+			padding-right: 20px;
+		}
+		.menu__items{
+			padding-top: 15px;
+			display: flex;
+		}
+		.menu__items:last-child{
+			padding-right: 40px;
+		}
+		&__btn{
+			padding-top: 13px;
+			padding-left: 40px;
+			padding-right: 40px;
+			display: block;
+		}
+	}
+}
