@@ -1,0 +1,106 @@
+.porfolio::after{
+	content: "";
+	background-image: url(../images/Group5.png);
+	width: 100%;
+	height: 400%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -10;
+}
+.card{
+	min-height: 300px;
+	width: 100%;
+	max-width: 500px;
+	color: #111;
+	font-family: 16px;
+	img{
+		width: 90%;
+		border: 1.5px solid rgba(46, 236, 197, 0.5);
+		border-radius: 10px;
+	}
+}
+.porfolio-swiper{
+	max-width: 960px;
+}
+.porfolio{
+	position: relative;
+	.porfolio-swiper{
+		max-width: 460px;
+		position: relative;
+	}
+	.porfolio-container{
+	}
+	&__inner{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	&__info{
+		max-width: 514px;
+	}
+	&__title{
+		text-align: center;
+		padding-bottom: 11px;
+	}
+	&__subtitle{
+		text-align: center;
+		padding-bottom: 42px;
+	}
+	&__buttons{
+		display: none;
+		.btn{
+			padding: 15px 30px 11px 31px;
+		}
+	}
+}
+
+@media(min-width: 576px){
+	.porfolio{
+		.porfolio-swiper__buttons{
+			margin-top: 40px;
+		}
+	}
+}
+@media(min-width: 922px){
+	.porfolio{
+		.porfolio-swiper__buttons{
+			position: absolute;
+			bottom: 150px;
+			width: 100%;
+		}
+	}
+}
+@media(min-width: 1200px){
+	.porfolio::after{
+		top: -450px;
+	}
+	.porfolio{
+			.porfolio-swiper{
+				max-width: 500px;
+				position: relative;
+			}
+			.porfolio-container{
+				margin-left: 10px;
+			}
+		margin-top: 288px;
+		&__info{
+			margin-right: 70px;
+			float: left;
+				.title{
+					font-size: 55px;
+					text-align: left;
+				}
+				.text{
+					margin-top: 18px;
+					font-size: 17px;
+					text-align: left;
+				}
+		}
+		&__buttons{
+			margin-top: 44px;
+			display: block;
+	}
+	}
+}

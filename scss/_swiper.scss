@@ -1,0 +1,48 @@
+.swiper-button-more,
+.swiper-button-back{
+	z-index: 1;
+	width: 70px;
+	height: 70px;
+	background: linear-gradient(165.96deg, #19201F 16.33%, #323939 90%);
+	border: 1.5px solid rgba(46, 236, 197, 0.5);
+	border-radius: 50%;
+	cursor: pointer;
+}
+.swiper-button-back::after,
+.swiper-button-more::after,
+.swiper-button-back::before,
+.swiper-button-more::before{
+	content: "";
+	width: 20px;
+	height: 3px;
+	background-color: #2C8E7A;
+	border-radius: 35%;
+	margin-top: 30px;
+	margin-left: 27px;
+	transform: rotate(45deg);
+	position: absolute;
+}
+.swiper-button-back::before,
+.swiper-button-more::before{
+	transform: rotate(-45deg);
+	margin-top: 42px;
+}
+.swiper-button-back::after{
+	transform: rotate(-45deg);
+	margin-left: 24px;
+}
+.swiper-button-back::before{
+	transform: rotate(45deg);
+	margin-left: 24px;
+}
+.porfolio-swiper__buttons{
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 24px;
+	display: flex;
+	justify-content: space-between;
+}
+img{
+	max-width: 100%;
+	object-fit: cover;
+}
